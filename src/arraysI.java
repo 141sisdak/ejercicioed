@@ -27,8 +27,32 @@ public class arraysI {
 			
 			
 		}
+		
+		for (int posicion=0;posicion<array.length - 1; posicion++){
+			
+			if(array[posicion] > array[posicion + 1]){
+				
+				 int siguiente= array[posicion+1];
+				 
+				 array[posicion+1] = array[posicion];
+				 
+				 array[posicion]= siguiente;
+				 
+				 posicion = -1;
+				 
+				 
+				
+			}
+		}
+			
 		System.out.println("El número menor es "+menor);
 		System.out.println("El número mayor es "+mayor);
+		String gilipollas = "";
+		for(Integer numero : array){
+			
+			gilipollas += numero + ",";
+		}
+		System.out.println(gilipollas);
 	}
 
 }
